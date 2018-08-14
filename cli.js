@@ -88,6 +88,7 @@ cli.loadConfig = function() {
 
     try {
         switch ( path.extname(confPath) ) {
+            case '.ts':
             case '.js':
                 config = require( path.resolve(confPath) ) || {};
                 break;
