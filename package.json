@@ -1,16 +1,18 @@
 {
-  "name": "jsdoc",
-  "version": "3.6.0-dev",
-  "revision": "1500758109682",
-  "description": "An API documentation generator for JavaScript.",
+  "name": "@daybrush/tsdoc",
+  "version": "0.1.0",
+  "description": "An API documentation generator for JavaScript and Typescript.",
   "keywords": [
     "documentation",
-    "javascript"
+    "javascript",
+    "typescript",
+    "tsdoc",
+    "jsdoc",
   ],
   "license": "Apache-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jsdoc3/jsdoc"
+    "url": "https://github.com/daybrush/tsdoc"
   },
   "dependencies": {
     "@babel/parser": "^7.0.0-rc.1",
@@ -42,14 +44,14 @@
     "test": "gulp lint; gulp test"
   },
   "bin": {
-    "jsdoc": "./jsdoc.js"
+    "tsdoc": "./jsdoc.js"
   },
   "greenkeeper": {
     "ignore": [
       "taffydb"
     ]
   },
-  "bugs": "https://github.com/jsdoc3/jsdoc/issues",
+  "bugs": "https://github.com/daybrush/tsdoc/issues",
   "author": {
     "name": "Michael Mathews",
     "email": "micmath@gmail.com"
