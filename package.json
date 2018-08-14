@@ -7,7 +7,7 @@
     "javascript",
     "typescript",
     "tsdoc",
-    "jsdoc",
+    "jsdoc"
   ],
   "license": "Apache-2.0",
   "repository": {
