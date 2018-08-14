@@ -1,6 +1,6 @@
 {
   "name": "@daybrush/jsdoc",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "An API documentation generator for JavaScript and Typescript.",
   "keywords": [
     "documentation",

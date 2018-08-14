@@ -1,4 +1,4 @@
-@daybrush/jsdoc [![npm version](https://badge.fury.io/js/@daybrush/jsdoc.svg)](https://badge.fury.io/js/@daybrush/jsdoc)
+@daybrush/jsdoc [![npm version](https://badge.fury.io/js/%40daybrush%2Fjsdoc.svg)](https://badge.fury.io/js/%40daybrush%2Fjsdoc)
 =======
 
 * Support Typescript
