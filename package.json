@@ -1,6 +1,6 @@
 {
   "name": "@daybrush/jsdoc",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "An API documentation generator for JavaScript and Typescript.",
   "keywords": [
     "documentation",
@@ -44,7 +44,7 @@
     "test": "gulp lint; gulp test"
   },
   "bin": {
-    "tsdoc": "./jsdoc.js"
+    "jsdoc": "./jsdoc.js"
   },
   "greenkeeper": {
     "ignore": [
