@@ -1,3 +1,12 @@
+@daybrush/jsdoc [![npm version](https://badge.fury.io/js/@daybrush/jsdoc.svg)](https://badge.fury.io/js/@daybrush/jsdoc)
+=======
+
+* Support Typescript
+```bash
+npm install --save-dev @daybrush/jsdoc
+```
+
+
 JSDoc 3
 =======
 
