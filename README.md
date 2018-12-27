@@ -6,7 +6,8 @@ npm install --save-dev @daybrush/jsdoc
 ```
 
 ## Support Typescript from version 0.3.0
-* [jsdoc demo for Typescript](http://daybrush.com/fjx/release/latest/doc/index.html)
+* [Scene.js Typescript API Documentation](http://daybrush.com/scenejs/release/latest/doc/index.html)
+* [fjx.js Typescript API Documentation](http://daybrush.com/fjx/release/latest/doc/index.html)
 * type
 ```ts
 // jsdoc
