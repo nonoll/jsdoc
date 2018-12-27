@@ -1,9 +1,119 @@
 @daybrush/jsdoc [![npm version](https://badge.fury.io/js/%40daybrush%2Fjsdoc.svg)](https://badge.fury.io/js/%40daybrush%2Fjsdoc)
 =======
 
-* Support Typescript
 ```bash
 npm install --save-dev @daybrush/jsdoc
+```
+
+## Support Typescript from version 0.3.0
+* type
+```ts
+// jsdoc
+/**
+ * @typedef {() => void} A - description
+ */
+
+// for typescript
+/**
+ * @typedef - description
+ */
+export type A = () => void;
+
+```
+* interface
+```ts
+// jsdoc
+/**
+ * @typedef {TSInterface} A - description
+ * @property {boolean} a
+ * @property {string} a
+ * @property {() => void} c
+ */
+
+// for typescript
+/**
+ * @typedef - description
+ */
+export interface A {
+    a: boolean;
+    b: string;
+    c: () => void;
+}
+```
+
+* function
+
+```ts
+// jsodc
+/**
+ * @function
+ * @param {A | C} a
+ * @param {B} b
+ * @param {C} c
+ * @returns {C} 
+ */
+export function A(a, b) {
+
+}
+
+// for typescript
+/**
+ */
+export function A(a: C);
+export function A(a: A, b; B): C {
+
+}
+```
+* class method
+```ts
+// jsdoc
+/**
+ * @extends B
+ * @implements C
+ */
+class A extends B {
+    /**
+     * @param {A} a
+     * @param {B} b
+     * @param {C} c
+     */
+    aaa(a, b, c) {}
+}
+
+// for typescript
+/**
+ */
+class A extends B {
+    /**
+     */
+    aaa(a: A, b: B, c: C) {}
+}
+```
+
+* jsdoc.json
+```json
+{
+    "plugins": [],
+	"recurseDepth": 10,
+	"opts": {
+        "template": "./node_modules/daybrush-jsdoc-template",
+        "destination": "./doc/"
+    },
+    "source": {
+        "include": ["./src", "README.md"], 
+        "includePattern": "(.+\\.js(doc|x)?|.+\\.ts(doc|x)?)$",
+        "excludePattern": "(^|\\/|\\\\)_"
+    },
+    "sourceType": "module",
+    "tags": {
+        "allowUnknownTags": true,
+        "dictionaries": ["jsdoc","closure"]
+    },
+    "templates": {
+        "cleverLinks": false,
+        "monospaceLinks": false
+    }
+}
 ```
 
 
