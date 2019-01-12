@@ -8,113 +8,83 @@ npm install --save-dev @daybrush/jsdoc
 ## Support Typescript from version 0.3.0
 * [Scene.js Typescript API Documentation](http://daybrush.com/scenejs/release/latest/doc/index.html)
 * [fjx.js Typescript API Documentation](http://daybrush.com/fjx/release/latest/doc/index.html)
-* type
+* [InfiniteGrid Typescript API Documentation](https://naver.github.io/egjs-infinitegrid/release/latest/doc/)
+
+### ```name``` and ```type``` can be omitted in function and method
+* jsdoc
 ```ts
-// jsdoc
 /**
- * @typedef {() => void} A - description
  */
-
-// for typescript
-/**
- * @typedef - description
- */
-export type A = () => void;
-
+function a(a: Parameter1, b: Parameter2): ReturnType {
+}
 ```
-* interface
-```ts
-// jsdoc
-/**
- * @typedef {TSInterface} A - description
- * @property {boolean} a
- * @property {string} a
- * @property {() => void} c
- */
+* result
 
-// for typescript
+![](./images/function-result.png)
+---
+
+### ```extends``` and ```implements``` can be omitted from the class.
+* jsdoc
+
+```ts
 /**
- * @typedef - description
+*/
+export class A extends B implements a {
+}
+```
+
+* result
+
+
+![](./images/class-result.png)
+
+---
+
+### Supports type declaration
+* jsdoc
+```ts
+/**
+ * @typedef
  */
-export interface A {
-    a: boolean;
-    b: string;
+export type a<T> = () => T;
+```
+
+* result
+
+![](./images/type-result.png)
+
+---
+### Supports interface declaration
+
+* jsdoc
+```ts
+/**
+ * @typedef
+ */
+export interface a {
+    a: string;
+    b: number;
     c: () => void;
+    d(a: string, b: number): void;
+    (a: string, b: number): void;
+    [key: string]: any;
 }
 ```
 
-* function
+* result
 
-```ts
-// jsodc
-/**
- * @function
- * @param {A | C} a
- * @param {B} b
- * @param {C} c
- * @returns {C} 
- */
-export function A(a, b) {
 
-}
+![](./images/interface-result.png)
 
-// for typescript
-/**
- */
-export function A(a: C);
-export function A(a: A, b; B): C {
+---
 
-}
-```
-* class method
-```ts
-// jsdoc
-/**
- * @extends B
- * @implements C
- */
-class A extends B {
-    /**
-     * @param {A} a
-     * @param {B} b
-     * @param {C} c
-     */
-    aaa(a, b, c) {}
-}
 
-// for typescript
-/**
- */
-class A extends B {
-    /**
-     */
-    aaa(a: A, b: B, c: C) {}
-}
-```
-
-* jsdoc.json
+### jsdoc.json (Add ts extension to includePattern)
 ```json
 {
-    "plugins": [],
-	"recurseDepth": 10,
-	"opts": {
-        "template": "./node_modules/daybrush-jsdoc-template",
-        "destination": "./doc/"
-    },
     "source": {
-        "include": ["./src", "README.md"], 
-        "includePattern": "(.+\\.js(doc|x)?|.+\\.ts(doc|x)?)$",
-        "excludePattern": "(^|\\/|\\\\)_"
+        "includePattern": ".+\\.(j|t)s(doc|x)?$",
     },
-    "sourceType": "module",
-    "tags": {
-        "allowUnknownTags": true,
-        "dictionaries": ["jsdoc","closure"]
-    },
-    "templates": {
-        "cleverLinks": false,
-        "monospaceLinks": false
-    }
 }
 ```
 
