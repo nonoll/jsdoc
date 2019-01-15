@@ -1,13 +1,14 @@
 {
   "name": "@daybrush/jsdoc",
-  "version": "0.2.1",
+  "version": "0.3.0-rc10",
   "description": "An API documentation generator for JavaScript and Typescript.",
   "keywords": [
     "documentation",
     "javascript",
     "typescript",
     "tsdoc",
-    "jsdoc"
+    "jsdoc",
+    "typedoc"
   ],
   "license": "Apache-2.0",
   "repository": {
@@ -15,7 +16,9 @@
     "url": "https://github.com/daybrush/jsdoc"
   },
   "dependencies": {
-    "@babel/parser": "^7.0.0-rc.1",
+    "@babel/parser": "^7.2.3",
+    "@babel/types": "^7.2.2",
+    "@daybrush/utils": "^0.4.0",
     "bluebird": "~3.5.0",
     "catharsis": "~0.8.9",
     "escape-string-regexp": "~1.0.5",
@@ -61,8 +64,10 @@
       "url": "https://github.com/jsdoc3/jsdoc/graphs/contributors"
     }
   ],
-  "maintainers": {
-    "name": "Jeff Williams",
-    "email": "jeffrey.l.williams@gmail.com"
-  }
+  "maintainers": [
+      {
+      "name": "Daybrush",
+      "email": "daybrush@gmail.com"
+    }
+  ]
 }
