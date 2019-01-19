@@ -6,8 +6,8 @@ npm install --save-dev @daybrush/jsdoc
 ```
 
 ## Support Typescript from version 0.3.0
-* [Scene.js Typescript API Documentation](http://daybrush.com/scenejs/release/latest/doc/index.html)
-* [@daybrush/utils Typescript API Documentation](http://daybrush.com/utils/release/latest/doc/index.html)
+* [Scene.js Typescript API Documentation](https://daybrush.com/scenejs/release/latest/doc/index.html)
+* [@daybrush/utils Typescript API Documentation](https://daybrush.com/utils/release/latest/doc/index.html)
 * [InfiniteGrid Typescript API Documentation](https://naver.github.io/egjs-infinitegrid/release/latest/doc/)
 
 ### ```name``` and ```type``` can be omitted in function and method
